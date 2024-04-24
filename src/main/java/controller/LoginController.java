@@ -7,7 +7,7 @@ import org.springframework.security.web.authentication.logout.SecurityContextLog
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("http://localhost:3000")
 @Controller
 public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
@@ -42,7 +42,7 @@ public class LoginController {
     public ResponseEntity<String> logout(){
         System.out.println("logout invoked");
         SecurityContextHolder.clearContext();
-        return new ResponseEntity<String>("Logout Successfully!", HttpStatus.UNAUTHORIZED);
+        return new ResponseEntity<String>("Logout Successfully!", HttpStatus.OK);
     }
 
 

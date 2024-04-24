@@ -109,7 +109,7 @@
 
 package CalculatorController;//package Controller;
 
-
+import java.lang.Object;
 public class ArthmeticEvaluator {
  static double  initialValue=0.0;
 
@@ -135,10 +135,10 @@ public class ArthmeticEvaluator {
                     }
                     if (buttons[i].type.equals("OPERATOR")) {
 
-                        if (buttons[i - 1].value.equals("SUBTRACTION") && buttons[i].value.equals("ADDITION")) {
-                            currentOperationString = "SUBTRACTION";
-                        } else if (buttons[i - 1].value.equals("SUBTRACTION") && buttons[i].value.equals("SUBTRACTION")) {
-                            currentOperationString = "ADDITION";
+                        if (buttons[i - 1].value.equals("Subtraction") && buttons[i].value.equals("Addition")) {
+                            currentOperationString = "Subtraction";
+                        } else if (buttons[i - 1].value.equals("Subtraction") && buttons[i].value.equals("Subtraction")) {
+                            currentOperationString = "Addition";
                         } else {
                             currentOperationString = stringValue;
                         }
@@ -151,13 +151,13 @@ public class ArthmeticEvaluator {
 
     public static double performOperation(double operand1, double operand2, String operation) {
         switch (operation) {
-            case "ADDITION":
+            case "Addition":
                 return operand1 + operand2;
-            case "SUBTRACTION":
+            case "Subtraction":
                 return operand1 - operand2;
-            case "MULTIPLY":
+            case "Multiply":
                 return operand1 * operand2;
-            case "DIVISION":
+            case "Divide":
                 if (operand2 != 0) {
                     return operand1 / operand2;
                 } else {
