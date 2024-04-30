@@ -26,6 +26,7 @@ public class LoginController {
         return "profile";
     }
     @GetMapping("/admin/profile")
+    @ResponseBody
     public String adminProfile(){
         return "admin";
     }
